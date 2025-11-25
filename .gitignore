@@ -1,0 +1,329 @@
+# ============================================
+# LLAVES SSH Y CREDENCIALES (CRÍTICO)
+# ============================================
+
+# Llaves SSH privadas y públicas
+*.pem
+*.key
+*.pub
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+id_ecdsa
+id_ecdsa.pub
+id_dsa
+id_dsa.pub
+
+# Llaves SSH específicas del proyecto
+GEMI
+GEMI.pub
+gemi1234
+gemi1234.pub
+
+# Certificados
+*.crt
+*.cer
+*.der
+*.p12
+*.pfx
+
+# ============================================
+# VARIABLES DE ENTORNO Y CONFIGURACIÓN
+# ============================================
+
+# Archivos de entorno
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+.env.staging
+
+# Archivos de configuración sensibles
+config.json
+secrets.json
+credentials.json
+firebase-config.json
+service-account.json
+
+# AWS
+.aws/
+aws-credentials
+
+# API Keys
+api-keys.txt
+apikeys.txt
+
+# ============================================
+# NODE.JS / NPM
+# ============================================
+
+# Dependencias
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Archivos de bloqueo opcionales
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Caché de npm/yarn
+.npm
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ============================================
+# ARCHIVOS DEL SISTEMA OPERATIVO
+# ============================================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+Icon
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============================================
+# EDITORES E IDEs
+# ============================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+.history/
+
+# JetBrains (WebStorm, PhpStorm, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+.idea_modules/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+Sessionx.vim
+.netrwhist
+*~
+tags
+[._]*.un~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ============================================
+# BUILD Y DISTRIBUCIÓN
+# ============================================
+
+# Directorios de build
+dist/
+build/
+out/
+target/
+*.app
+*.exe
+*.war
+*.jar
+*.class
+
+# Archivos temporales de compilación
+*.log
+*.tmp
+*.temp
+*.cache
+.cache/
+
+# ============================================
+# BASES DE DATOS
+# ============================================
+
+# SQLite
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+
+# MongoDB
+*.mongodb
+
+# MySQL dumps
+*.sql
+*.dump
+
+# ============================================
+# TESTING Y COVERAGE
+# ============================================
+
+# Coverage
+coverage/
+*.lcov
+.nyc_output/
+.coverage
+htmlcov/
+*.cover
+*.py,cover
+
+# Reportes de test
+test-results/
+junit.xml
+
+# ============================================
+# LOGS Y DEBUGGING
+# ============================================
+
+# Logs generales
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# Logs de runtime
+*.pid
+*.seed
+*.pid.lock
+
+# ============================================
+# RESPALDOS Y TEMPORALES
+# ============================================
+
+# Respaldos
+*.backup
+*.bak
+*.swp
+*.swo
+*~.nib
+*.old
+*.orig
+
+# Archivos temporales
+tmp/
+temp/
+*.tmp
+.temp/
+
+# ============================================
+# DEPENDENCIAS Y PAQUETES
+# ============================================
+
+# Directorios de dependencias
+jspm_packages/
+bower_components/
+vendor/
+
+# Archivos comprimidos
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# ============================================
+# CLOUD Y DEPLOYMENT
+# ============================================
+
+# Vercel
+.vercel
+
+# Netlify
+.netlify
+
+# Firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# Heroku
+.heroku/
+
+# Docker
+.dockerignore
+
+# ============================================
+# OTROS
+# ============================================
+
+# Archivos de sistema
+.git/
+.svn/
+.hg/
+
+# Archivos locales personales
+TODO.txt
+NOTES.txt
+notes/
+.local/
+
+# Archivos de sesión
+.session
+*.session
+
+# Archivos de usuario
+user-data/
+uploads/
+private/

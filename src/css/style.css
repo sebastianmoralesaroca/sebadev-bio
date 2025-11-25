@@ -23,17 +23,35 @@
 
 body {
     font-family: 'Ubuntu', system-ui, -apple-system, sans-serif;
-    background-color: var(--dark-bg);
+    background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
     color: #ffffff;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-/* Contenedor principal */
+/* Contenedor principal - Vista móvil siempre */
 #app {
     position: relative;
     width: 100%;
+    max-width: 480px; /* Ancho máximo tipo móvil */
     min-height: 100vh;
+    background-color: var(--dark-bg);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    margin: 0 auto;
+}
+
+/* Header con vista móvil centrada */
+.header-mobile-view {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 480px; /* Mismo ancho que #app */
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
 }
 
 /* Animación fade-in */
@@ -75,4 +93,188 @@ body {
 /* Utilidades adicionales */
 .animate-bounce {
     animation: bounce 2s infinite;
+}
+
+/* ============================================
+   BREAKPOINTS - RESPONSIVE DESIGN
+   ============================================ */
+
+/* Mobile Small (320px - 374px) */
+@media (max-width: 374px) {
+    #app {
+        max-width: 100%;
+    }
+
+    .header-mobile-view {
+        max-width: 100%;
+    }
+}
+
+/* Mobile Medium (375px - 424px) - iPhone SE, iPhone 12/13/14 */
+@media (min-width: 375px) and (max-width: 424px) {
+    #app {
+        max-width: 100%;
+    }
+
+    .header-mobile-view {
+        max-width: 100%;
+    }
+}
+
+/* Mobile Large (425px - 767px) - iPhone Plus, Android grandes */
+@media (min-width: 425px) and (max-width: 767px) {
+    #app {
+        max-width: 100%;
+    }
+
+    .header-mobile-view {
+        max-width: 100%;
+    }
+}
+
+/* Tablet (768px - 1023px) - iPad, tablets Android */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #app {
+        max-width: 480px; /* Mantiene vista móvil */
+    }
+
+    .header-mobile-view {
+        max-width: 480px; /* Mantiene vista móvil */
+    }
+
+    body {
+        background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+    }
+}
+
+/* Desktop Small (1024px - 1439px) - Laptops */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    #app {
+        max-width: 480px; /* Mantiene vista móvil */
+    }
+
+    .header-mobile-view {
+        max-width: 480px; /* Mantiene vista móvil */
+    }
+
+    body {
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+    }
+}
+
+/* Desktop Medium (1440px - 1919px) - Monitores estándar */
+@media (min-width: 1440px) and (max-width: 1919px) {
+    #app {
+        max-width: 480px; /* Mantiene vista móvil */
+    }
+
+    .header-mobile-view {
+        max-width: 480px; /* Mantiene vista móvil */
+    }
+
+    body {
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+    }
+}
+
+/* Desktop Large (1920px+) - Monitores grandes, 4K */
+@media (min-width: 1920px) {
+    #app {
+        max-width: 480px; /* Mantiene vista móvil */
+    }
+
+    .header-mobile-view {
+        max-width: 480px; /* Mantiene vista móvil */
+    }
+
+    body {
+        background: radial-gradient(ellipse at center, #1a1a1a 0%, #0a0a0a 70%);
+    }
+}
+
+/* ============================================
+   AJUSTES ESPECÍFICOS PARA DISPOSITIVOS
+   ============================================ */
+
+/* iPhone SE (375x667) */
+@media only screen
+    and (device-width: 375px)
+    and (device-height: 667px)
+    and (-webkit-device-pixel-ratio: 2) {
+    #app {
+        max-width: 100%;
+    }
+
+    .header-mobile-view {
+        max-width: 100%;
+    }
+}
+
+/* iPhone 12/13/14 (390x844) */
+@media only screen
+    and (device-width: 390px)
+    and (device-height: 844px)
+    and (-webkit-device-pixel-ratio: 3) {
+    #app {
+        max-width: 100%;
+    }
+
+    .header-mobile-view {
+        max-width: 100%;
+    }
+}
+
+/* iPhone 14 Pro Max (430x932) */
+@media only screen
+    and (device-width: 430px)
+    and (device-height: 932px)
+    and (-webkit-device-pixel-ratio: 3) {
+    #app {
+        max-width: 100%;
+    }
+
+    .header-mobile-view {
+        max-width: 100%;
+    }
+}
+
+/* iPad (768x1024) */
+@media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px) {
+    #app {
+        max-width: 480px;
+    }
+
+    .header-mobile-view {
+        max-width: 480px;
+    }
+}
+
+/* ============================================
+   MODO LANDSCAPE (Horizontal)
+   ============================================ */
+
+/* Mobile landscape */
+@media (max-height: 500px) and (orientation: landscape) {
+    #app {
+        max-width: 480px;
+    }
+
+    .header-mobile-view {
+        max-width: 480px;
+    }
+}
+
+/* ============================================
+   PREFERENCIAS DE USUARIO
+   ============================================ */
+
+/* Reduce motion para usuarios con sensibilidad */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }

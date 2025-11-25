@@ -2,7 +2,7 @@
 
 export function createHeader() {
     const header = document.createElement('header');
-    header.className = 'w-full fixed top-0 left-0';
+    header.className = 'header-mobile-view';
     header.style.height = '580px';
     header.style.zIndex = '5';
 
@@ -10,7 +10,7 @@ export function createHeader() {
         <!-- Imagen de fondo -->
         <div class="w-full h-full relative">
             <img
-                src="/public/me.jpg"
+                src="public/me.jpg"
                 alt="Background"
                 class="w-full h-full object-cover"
             />

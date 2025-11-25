@@ -13,7 +13,7 @@ export function createSection() {
             <!-- Servicios -->
             <a href="https://sebadev123.netlify.app/" target="_blank" class="block relative border-2 border-cyan-400 rounded-2xl p-8 hover:bg-gray-900/30 transition-all duration-300 overflow-hidden cursor-pointer">
                 <!-- Imagen de fondo -->
-                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/public/services.jpeg')"></div>
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('public/services.jpeg')"></div>
                 <!-- Overlay oscuro -->
                 <div class="absolute inset-0 bg-black/70"></div>
 
@@ -34,7 +34,7 @@ export function createSection() {
             <!-- Bnn Menu -->
             <a href="" target="_blank" class="block relative mt-6 border-2 border-cyan-400 rounded-2xl p-8 hover:bg-gray-900/30 transition-all duration-300 overflow-hidden cursor-pointer">
                 <!-- Imagen de fondo -->
-                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/public/menu.jpeg')"></div>
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('public/menu.jpeg')"></div>
                 <!-- Overlay oscuro -->
                 <div class="absolute inset-0 bg-black/70"></div>
 
@@ -55,7 +55,7 @@ export function createSection() {
             <!-- Bnn Web -->
             <a href="" target="_blank" class="block relative mt-6 border-2 border-cyan-400 rounded-2xl p-8 hover:bg-gray-900/30 transition-all duration-300 overflow-hidden cursor-pointer">
                 <!-- Imagen de fondo -->
-                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/public/bnn1.jpeg')"></div>
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('public/bnn1.jpeg')"></div>
                 <!-- Overlay oscuro -->
                 <div class="absolute inset-0 bg-black/70"></div>
 
@@ -76,7 +76,7 @@ export function createSection() {
             <!-- CV -->
             <a href="#" target="_blank" class="block relative mt-6 border-2 border-cyan-400 rounded-2xl p-8 hover:bg-gray-900/30 transition-all duration-300 overflow-hidden cursor-pointer">
                 <!-- Imagen de fondo -->
-                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/public/code.jpeg')"></div>
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('public/code.jpeg')"></div>
                 <!-- Overlay oscuro -->
                 <div class="absolute inset-0 bg-black/70"></div>
 
@@ -97,7 +97,7 @@ export function createSection() {
             <!-- GitHub -->
             <a href="https://github.com/sebastianmoralesaroca" target="_blank" class="block relative mt-6 border-2 border-cyan-400 rounded-2xl p-8 hover:bg-gray-900/30 transition-all duration-300 overflow-hidden cursor-pointer">
                 <!-- Imagen de fondo -->
-                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/public/github.jpeg')"></div>
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('public/github.jpeg')"></div>
                 <!-- Overlay oscuro -->
                 <div class="absolute inset-0 bg-black/70"></div>
 
