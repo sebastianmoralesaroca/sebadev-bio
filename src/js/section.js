@@ -11,7 +11,7 @@ export function createSection() {
         <div class="max-w-4xl mx-auto relative">
 
             <!-- Servicios -->
-            <a href="https://sebadev123.netlify.app/" target="_blank" class="block relative border-2 border-cyan-400 rounded-2xl p-8 hover:bg-gray-900/30 transition-all duration-300 overflow-hidden cursor-pointer">
+            <a href="https://sebadev-services.netlify.app/" target="_blank" class="block relative border-2 border-cyan-400 rounded-2xl p-8 hover:bg-gray-900/30 transition-all duration-300 overflow-hidden cursor-pointer">
                 <!-- Imagen de fondo -->
                 <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('public/services.jpeg')"></div>
                 <!-- Overlay oscuro -->
@@ -73,8 +73,8 @@ export function createSection() {
                 </div>
             </a>
 
-            <!-- CV -->
-            <a href="#" target="_blank" class="block relative mt-6 border-2 border-cyan-400 rounded-2xl p-8 hover:bg-gray-900/30 transition-all duration-300 overflow-hidden cursor-pointer">
+            <!-- Portfolio -->
+            <a href="https://sebadev-portfolio.netlify.app/" target="_blank" class="block relative mt-6 border-2 border-cyan-400 rounded-2xl p-8 hover:bg-gray-900/30 transition-all duration-300 overflow-hidden cursor-pointer">
                 <!-- Imagen de fondo -->
                 <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('public/code.jpeg')"></div>
                 <!-- Overlay oscuro -->
@@ -84,7 +84,7 @@ export function createSection() {
                 <div class="relative z-10 text-center">
                     <!-- Título -->
                     <h3 class="text-2xl font-bold text-white mb-4">
-                        CV
+                        Portfolio & CV
                     </h3>
 
                     <!-- Descripción -->
