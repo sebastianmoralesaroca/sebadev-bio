@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Breakpoints - Vista Móvil en Desktop</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+            background: #000;
+            border: 2px solid #22d3ee;
+            border-radius: 20px;
+            padding: 40px 20px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+        }
+
+        h1 {
+            color: #22d3ee;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .info-box {
+            background: #111;
+            border: 1px solid #22d3ee;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .info-box h2 {
+            color: #22d3ee;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            color: #9CA3AF;
+            line-height: 1.6;
+        }
+
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background: #1a1a1a;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            color: #9CA3AF;
+        }
+
+        .metric-value {
+            color: #22d3ee;
+            font-weight: bold;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .status.mobile {
+            background: #10b981;
+            color: white;
+        }
+
+        .status.desktop {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .visual-demo {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .screen-wrapper {
+            display: inline-block;
+            padding: 20px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .screen {
+            background: #000;
+            border: 3px solid #22d3ee;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            color: #22d3ee;
+        }
+
+        .screen.mobile {
+            width: 150px;
+            height: 250px;
+        }
+
+        .screen.desktop {
+            width: 300px;
+            height: 200px;
+            position: relative;
+        }
+
+        .app-inside {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 20px;
+            width: 100px;
+            height: 160px;
+            background: #22d3ee;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-weight: bold;
+        }
+
+        @media (min-width: 768px) {
+            body {
+                background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Test de Breakpoints</h1>
+
+        <div class="info-box">
+            <h2>📱 Estado Actual</h2>
+            <div class="metric">
+                <span class="metric-label">Ancho de ventana:</span>
+                <span class="metric-value" id="window-width">-</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Ancho de contenedor:</span>
+                <span class="metric-value" id="container-width">-</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Tipo de dispositivo:</span>
+                <span class="metric-value" id="device-type">-</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Vista:</span>
+                <span class="status" id="view-status">-</span>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <h2>✅ Verificación</h2>
+            <p id="verification-message">Redimensiona la ventana del navegador para ver cómo se adapta.</p>
+        </div>
+
+        <div class="info-box">
+            <h2>🎨 Rangos de Breakpoints</h2>
+            <div style="color: #9CA3AF; line-height: 1.8;">
+                <p>📱 <strong>0-767px:</strong> Móvil (100% ancho)</p>
+                <p>📱 <strong>768-1023px:</strong> Tablet (480px centrado)</p>
+                <p>💻 <strong>1024-1439px:</strong> Laptop (480px centrado)</p>
+                <p>🖥️ <strong>1440-1919px:</strong> Desktop (480px centrado)</p>
+                <p>🖥️ <strong>1920px+:</strong> 4K (480px centrado)</p>
+            </div>
+        </div>
+
+        <div class="visual-demo">
+            <h2 style="color: #22d3ee; margin-bottom: 20px;">📊 Visualización</h2>
+
+            <div class="screen-wrapper">
+                <p style="color: #9CA3AF; margin-bottom: 10px;">Móvil</p>
+                <div class="screen mobile">
+                    App<br>100%
+                </div>
+            </div>
+
+            <div class="screen-wrapper">
+                <p style="color: #9CA3AF; margin-bottom: 10px;">Desktop</p>
+                <div class="screen desktop">
+                    <div class="app-inside">
+                        App<br>480px
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box" style="margin-top: 30px;">
+            <h2>🔧 Instrucciones</h2>
+            <p style="color: #9CA3AF; line-height: 1.8;">
+                1. Abre DevTools (F12)<br>
+                2. Presiona Ctrl+Shift+M<br>
+                3. Prueba diferentes tamaños:<br>
+                   • 375x667 (iPhone SE)<br>
+                   • 768x1024 (iPad)<br>
+                   • 1920x1080 (Desktop)<br>
+                4. Verifica que en desktop el ancho sea 480px
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function updateMetrics() {
+            const windowWidth = window.innerWidth;
+            const container = document.querySelector('.container');
+            const containerWidth = container.offsetWidth;
+
+            document.getElementById('window-width').textContent = windowWidth + 'px';
+            document.getElementById('container-width').textContent = containerWidth + 'px';
+
+            let deviceType = '';
+            let viewStatus = '';
+            let statusClass = '';
+            let verificationMsg = '';
+
+            if (windowWidth < 768) {
+                deviceType = 'Móvil';
+                viewStatus = '✅ Vista Móvil (100%)';
+                statusClass = 'mobile';
+                verificationMsg = '✅ Correcto: En móvil ocupa todo el ancho.';
+            } else if (windowWidth >= 768 && windowWidth < 1024) {
+                deviceType = 'Tablet';
+                viewStatus = '✅ Vista Móvil (480px max)';
+                statusClass = 'mobile';
+                verificationMsg = containerWidth <= 480
+                    ? '✅ Correcto: El contenedor está limitado a 480px.'
+                    : '⚠️ Advertencia: El contenedor debería ser máximo 480px.';
+            } else if (windowWidth >= 1024 && windowWidth < 1440) {
+                deviceType = 'Laptop';
+                viewStatus = '💻 Vista Móvil en Desktop';
+                statusClass = 'desktop';
+                verificationMsg = containerWidth <= 480
+                    ? '✅ Perfecto: El contenedor está en 480px (vista móvil en laptop).'
+                    : '⚠️ Advertencia: El contenedor debería ser 480px.';
+            } else if (windowWidth >= 1440 && windowWidth < 1920) {
+                deviceType = 'Desktop';
+                viewStatus = '🖥️ Vista Móvil en Desktop';
+                statusClass = 'desktop';
+                verificationMsg = containerWidth <= 480
+                    ? '✅ Perfecto: El contenedor está en 480px (vista móvil en desktop).'
+                    : '⚠️ Advertencia: El contenedor debería ser 480px.';
+            } else {
+                deviceType = '4K / Desktop Grande';
+                viewStatus = '🖥️ Vista Móvil en 4K';
+                statusClass = 'desktop';
+                verificationMsg = containerWidth <= 480
+                    ? '✅ Excelente: El contenedor mantiene 480px incluso en 4K!'
+                    : '⚠️ Advertencia: El contenedor debería ser 480px.';
+            }
+
+            document.getElementById('device-type').textContent = deviceType;
+            const statusElement = document.getElementById('view-status');
+            statusElement.textContent = viewStatus;
+            statusElement.className = 'status ' + statusClass;
+            document.getElementById('verification-message').textContent = verificationMsg;
+        }
+
+        // Actualizar al cargar
+        updateMetrics();
+
+        // Actualizar al redimensionar
+        window.addEventListener('resize', updateMetrics);
+
+        // Actualizar cada segundo (por si acaso)
+        setInterval(updateMetrics, 1000);
+    </script>
+</body>
+</html>

@@ -10,7 +10,7 @@ export function createHeader() {
         <!-- Imagen de fondo -->
         <div class="w-full h-full relative">
             <img
-                src="public/me.jpg"
+                src="public/mei.jpg"
                 alt="Background"
                 class="w-full h-full object-cover"
             />

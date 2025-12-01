@@ -102,44 +102,50 @@ body {
 /* Mobile Small (320px - 374px) */
 @media (max-width: 374px) {
     #app {
-        max-width: 100%;
+        max-width: 480px;
+        width: 100%;
     }
 
     .header-mobile-view {
-        max-width: 100%;
+        max-width: 480px;
+        width: 100%;
     }
 }
 
 /* Mobile Medium (375px - 424px) - iPhone SE, iPhone 12/13/14 */
 @media (min-width: 375px) and (max-width: 424px) {
     #app {
-        max-width: 100%;
+        max-width: 480px;
+        width: 100%;
     }
 
     .header-mobile-view {
-        max-width: 100%;
+        max-width: 480px;
+        width: 100%;
     }
 }
 
 /* Mobile Large (425px - 767px) - iPhone Plus, Android grandes */
 @media (min-width: 425px) and (max-width: 767px) {
     #app {
-        max-width: 100%;
+        max-width: 480px;
+        width: 100%;
     }
 
     .header-mobile-view {
-        max-width: 100%;
+        max-width: 480px;
+        width: 100%;
     }
 }
 
 /* Tablet (768px - 1023px) - iPad, tablets Android */
 @media (min-width: 768px) and (max-width: 1023px) {
     #app {
-        max-width: 480px; /* Mantiene vista móvil */
+        max-width: 600px;
     }
 
     .header-mobile-view {
-        max-width: 480px; /* Mantiene vista móvil */
+        max-width: 600px;
     }
 
     body {
@@ -150,11 +156,11 @@ body {
 /* Desktop Small (1024px - 1439px) - Laptops */
 @media (min-width: 1024px) and (max-width: 1439px) {
     #app {
-        max-width: 480px; /* Mantiene vista móvil */
+        max-width: 600px;
     }
 
     .header-mobile-view {
-        max-width: 480px; /* Mantiene vista móvil */
+        max-width: 600px;
     }
 
     body {
@@ -165,11 +171,11 @@ body {
 /* Desktop Medium (1440px - 1919px) - Monitores estándar */
 @media (min-width: 1440px) and (max-width: 1919px) {
     #app {
-        max-width: 480px; /* Mantiene vista móvil */
+        max-width: 600px;
     }
 
     .header-mobile-view {
-        max-width: 480px; /* Mantiene vista móvil */
+        max-width: 600px;
     }
 
     body {
@@ -180,11 +186,11 @@ body {
 /* Desktop Large (1920px+) - Monitores grandes, 4K */
 @media (min-width: 1920px) {
     #app {
-        max-width: 480px; /* Mantiene vista móvil */
+        max-width: 600px;
     }
 
     .header-mobile-view {
-        max-width: 480px; /* Mantiene vista móvil */
+        max-width: 600px;
     }
 
     body {
@@ -202,11 +208,13 @@ body {
     and (device-height: 667px)
     and (-webkit-device-pixel-ratio: 2) {
     #app {
-        max-width: 100%;
+        max-width: 480px;
+        width: 100%;
     }
 
     .header-mobile-view {
-        max-width: 100%;
+        max-width: 480px;
+        width: 100%;
     }
 }
 
@@ -216,11 +224,13 @@ body {
     and (device-height: 844px)
     and (-webkit-device-pixel-ratio: 3) {
     #app {
-        max-width: 100%;
+        max-width: 480px;
+        width: 100%;
     }
 
     .header-mobile-view {
-        max-width: 100%;
+        max-width: 480px;
+        width: 100%;
     }
 }
 
@@ -230,11 +240,13 @@ body {
     and (device-height: 932px)
     and (-webkit-device-pixel-ratio: 3) {
     #app {
-        max-width: 100%;
+        max-width: 480px;
+        width: 100%;
     }
 
     .header-mobile-view {
-        max-width: 100%;
+        max-width: 480px;
+        width: 100%;
     }
 }
 
@@ -243,11 +255,11 @@ body {
     and (min-device-width: 768px)
     and (max-device-width: 1024px) {
     #app {
-        max-width: 480px;
+        max-width: 600px;
     }
 
     .header-mobile-view {
-        max-width: 480px;
+        max-width: 600px;
     }
 }
 
@@ -258,11 +270,11 @@ body {
 /* Mobile landscape */
 @media (max-height: 500px) and (orientation: landscape) {
     #app {
-        max-width: 480px;
+        max-width: 600px;
     }
 
     .header-mobile-view {
-        max-width: 480px;
+        max-width: 600px;
     }
 }
 
@@ -278,3 +290,4 @@ body {
         transition-duration: 0.01ms !important;
     }
 }
+
